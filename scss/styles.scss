@@ -13,11 +13,11 @@ body {
     height: 100vh;
     font-family: $font-primary;
     padding: 25px;
+    box-sizing: border-box;
 
     @media screen and (min-width: 980px) {
         background-color: $color-very-dark-blue;
         background-size: contain;
-        background-repeat: no-repeat;
         background-position: center bottom;
         background-image: url('../images/bg-desktop.png');
     }

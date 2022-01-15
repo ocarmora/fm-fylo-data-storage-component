@@ -12,34 +12,57 @@ body {
     align-items: center;
     height: 100vh;
     font-family: $font-primary;
+    padding: 25px;
+
+    @media screen and (min-width: 980px) {
+        background-color: $color-very-dark-blue;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-image: url('../images/bg-desktop.png');
+    }
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 326px;
+    width: 100%;
+    max-width: 326px;
+
+    @media screen and (min-width: 980px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 925px;
+    }
     
     .utility-section {
         background-color: $color-dark-blue;
         border-radius: 10px 100px 10px 10px;
         padding: 42px;
-    }
+        box-sizing: border-box;
 
-    .icon-container {
-        display: flex;
-        margin-top: 33px;
-
-        .icon {
-            width: 48px;
-            height: 48px;
-            background-color: $color-very-dark-blue;
-            border-radius: 10px;
+        @media screen and (min-width: 980px) {
+            width: 350px;
+        }
+        
+        .icon-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 16px;
+            margin-top: 33px;
+
+            .icon {
+                width: 48px;
+                height: 48px;
+                background-color: $color-very-dark-blue;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 16px;
+            }
         }
     }
+
 
     .usage-section {
         background-color: $color-dark-blue;
@@ -54,8 +77,17 @@ body {
         height: 160px;
         box-sizing: border-box;
 
+        @media screen and (min-width: 980px) {
+            justify-content: center;
+            width: 540px;
+        }
+
         p {
             text-align: center;
+            
+            @media screen and (min-width: 980px) {
+                text-align: left;
+            }
 
             span {
                 font-weight: 700;
@@ -65,7 +97,7 @@ body {
         .usage-left {
             position: absolute;
             left: 70px;
-            bottom: -35px;
+            bottom: -40px;
             background-color: #fff;
             width: 180px;
             height: 72px;
@@ -76,6 +108,27 @@ body {
             color: $color-grayish-blue;
             padding: 0 25px;
             box-sizing: border-box;
+
+            
+            @media screen and (min-width: 980px) {
+                top: -45px;
+                left: 325px; // TODO: Revisar estilo para que se mueva con pantalla
+                bottom: none;
+                
+
+                .corner {
+                    border-color: transparent transparent  transparent #fff;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 20px 20px 20px 20px;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    right: -20px;
+                    bottom: -10px;
+                }
+
+            }
 
             span.quantity {
                font-size: 40px; 

@@ -13,23 +13,48 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Raleway", sans-serif;
+  padding: 25px;
+}
+@media screen and (min-width: 980px) {
+  body {
+    background-color: #0c122c;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url("../images/bg-desktop.png");
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 326px;
+  width: 100%;
+  max-width: 326px;
+}
+@media screen and (min-width: 980px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 925px;
+  }
 }
 .container .utility-section {
   background-color: #1d2c67;
   border-radius: 10px 100px 10px 10px;
   padding: 42px;
+  box-sizing: border-box;
 }
-.container .icon-container {
+@media screen and (min-width: 980px) {
+  .container .utility-section {
+    width: 350px;
+  }
+}
+.container .utility-section .icon-container {
   display: flex;
   margin-top: 33px;
 }
-.container .icon-container .icon {
+.container .utility-section .icon-container .icon {
   width: 48px;
   height: 48px;
   background-color: #0c122c;
@@ -52,8 +77,19 @@ body {
   height: 160px;
   box-sizing: border-box;
 }
+@media screen and (min-width: 980px) {
+  .container .usage-section {
+    justify-content: center;
+    width: 540px;
+  }
+}
 .container .usage-section p {
   text-align: center;
+}
+@media screen and (min-width: 980px) {
+  .container .usage-section p {
+    text-align: left;
+  }
 }
 .container .usage-section p span {
   font-weight: 700;
@@ -61,7 +97,7 @@ body {
 .container .usage-section .usage-left {
   position: absolute;
   left: 70px;
-  bottom: -35px;
+  bottom: -40px;
   background-color: #fff;
   width: 180px;
   height: 72px;
@@ -72,6 +108,24 @@ body {
   color: #848794;
   padding: 0 25px;
   box-sizing: border-box;
+}
+@media screen and (min-width: 980px) {
+  .container .usage-section .usage-left {
+    top: -45px;
+    left: 325px;
+    bottom: none;
+  }
+  .container .usage-section .usage-left .corner {
+    border-color: transparent transparent transparent #fff;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 20px 20px 20px;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+  }
 }
 .container .usage-section .usage-left span.quantity {
   font-size: 40px;

@@ -1,7 +1,7 @@
 @import 'colors';
 @import '_typography';
 
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
 
 body {
     background-image: url('../images/bg-mobile.png');
@@ -13,8 +13,7 @@ body {
     height: 100vh;
     font-family: $font-primary;
     padding: 25px;
-    box-sizing: border-box;
-
+    
     @media screen and (min-width: 980px) {
         background-color: $color-very-dark-blue;
         background-size: contain;
@@ -40,7 +39,7 @@ body {
         background-color: $color-dark-blue;
         border-radius: 10px 100px 10px 10px;
         padding: 42px;
-        box-sizing: border-box;
+        
 
         @media screen and (min-width: 980px) {
             width: 350px;
@@ -75,7 +74,6 @@ body {
         display: flex;
         flex-direction: column;
         height: 160px;
-        box-sizing: border-box;
 
         @media screen and (min-width: 980px) {
             justify-content: center;
@@ -107,14 +105,13 @@ body {
             align-items: center;
             color: $color-grayish-blue;
             padding: 0 25px;
-            box-sizing: border-box;
+            
 
             
             @media screen and (min-width: 980px) {
                 top: -45px;
                 left: 325px; // TODO: Revisar estilo para que se mueva con pantalla
                 bottom: none;
-                
 
                 .corner {
                     border-color: transparent transparent  transparent #fff;
@@ -157,9 +154,7 @@ body {
                 width: 100%;
                 height: 20px;
                 border-radius: 10px;
-                box-sizing: border-box;
                 margin: 16px 0 12px 0;
-
 
                 .bar {
                     align-self: center;

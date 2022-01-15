@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+  padding: 25px;
+}
+@media screen and (min-width: 980px) {
+  body {
+    background-color: #0c122c;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url("../images/bg-desktop.png");
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 326px;
+}
+@media screen and (min-width: 980px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 925px;
+  }
+}
+.container .utility-section {
+  background-color: #1d2c67;
+  border-radius: 10px 100px 10px 10px;
+  padding: 42px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 980px) {
+  .container .utility-section {
+    width: 350px;
+  }
+}
+.container .utility-section .icon-container {
+  display: flex;
+  margin-top: 33px;
+}
+.container .utility-section .icon-container .icon {
+  width: 48px;
+  height: 48px;
+  background-color: #0c122c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.container .usage-section {
+  background-color: #1d2c67;
+  border-radius: 10px;
+  margin-top: 16px;
+  padding: 35px;
+  color: #dddbff;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 980px) {
+  .container .usage-section {
+    justify-content: center;
+    width: 540px;
+  }
+}
+.container .usage-section p {
+  text-align: center;
+}
+@media screen and (min-width: 980px) {
+  .container .usage-section p {
+    text-align: left;
+  }
+}
+.container .usage-section p span {
+  font-weight: 700;
+}
+.container .usage-section .usage-left {
+  position: absolute;
+  left: 70px;
+  bottom: -40px;
+  background-color: #fff;
+  width: 180px;
+  height: 72px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #848794;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 980px) {
+  .container .usage-section .usage-left {
+    top: -45px;
+    left: 325px;
+    bottom: none;
+  }
+  .container .usage-section .usage-left .corner {
+    border-color: transparent transparent transparent #fff;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 20px 20px 20px;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+  }
+}
+.container .usage-section .usage-left span.quantity {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+}
+.container .usage-section .usage-left span.meassure {
+  margin-top: 5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.container .usage-section .progress-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .usage-section .progress-container .probress-bar {
+  display: flex;
+  flex: 1 0 100%;
+  background-color: #0c122c;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 16px 0 12px 0;
+}
+.container .usage-section .progress-container .probress-bar .bar {
+  align-self: center;
+  height: 70%;
+  margin-left: 3px;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 8px;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.container .usage-section .progress-container .probress-bar .bar .bar-dot {
+  width: 10px;
+  position: absolute;
+  height: 10px;
+  background-color: #fff;
+  right: 2px;
+  border-radius: 50%;
+}
+.container .usage-section .progress-container span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.container .usage-section .progress-container span.progress-data-min {
+  flex: 1;
+}
+.container .usage-section .progress-container span.progress-data-max {
+  flex: 1;
+  text-align: right;
+}
+
+/*# sourceMappingURL=syles.css.map */

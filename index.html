@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/syles.css">
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main class="container">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+      <div class="utility-section">
+        <img src="images/logo.svg" alt="Fylo logo" />
+        <div class="icon-container">
+          <div class="icon">
+            <img src="images/icon-document.svg" alt="Document icon" />
+          </div>
+          <div class="icon">
+            <img src="images/icon-folder.svg" alt="Folder icon" />
+          </div>
+          <div class="icon">
+            <img src="images/icon-upload.svg" alt="Upload icon" />
+          </div>
+        </div>  
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <div class="usage-section">
+        <p>You’ve used <span>815 GB</span> of your storage</p>
+        <div class="usage-left">
+          <span class="quantity">185</span>
+          <span class="meassure">GB LEFT</span>
+          <div class="corner"></div>
+        </div>
+        <div class="progress-container">
+          <div class="probress-bar">
+            <div class="bar" style="width: 72%;">
+              <div class="bar-dot"></div>
+            </div>
+          </div>
+          <span class="progress-data-min">0 GB</span>
+          <span class="progress-data-max">1000 GB</span>
+        </div>
+      </div>
+    </main>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  </body>
 </html>

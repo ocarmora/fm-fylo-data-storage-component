@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: $font-primary;
 }
 
 .container {
@@ -38,6 +39,115 @@ body {
             align-items: center;
             margin-right: 16px;
         }
+    }
+
+    .usage-section {
+        background-color: $color-dark-blue;
+        border-radius: 10px;
+        margin-top: 16px;
+        padding: 35px;
+        color: $color-pale-blue;
+        font-size: $font-size-normal;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 160px;
+        box-sizing: border-box;
+
+        p {
+            text-align: center;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .usage-left {
+            position: absolute;
+            left: 70px;
+            bottom: -35px;
+            background-color: #fff;
+            width: 180px;
+            height: 72px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: $color-grayish-blue;
+            padding: 0 25px;
+            box-sizing: border-box;
+
+            span.quantity {
+               font-size: 40px; 
+               font-weight: 700;
+               color: #000;
+            }
+
+            span.meassure {
+                margin-top: 5px;
+                font-weight: 700;
+                letter-spacing: 0.8px;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+
+        }
+
+        .progress-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            .probress-bar {
+                display: flex;
+                flex: 1 0 100%;
+                background-color: $color-very-dark-blue;
+                width: 100%;
+                height: 20px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                margin: 16px 0 12px 0;
+
+
+                .bar {
+                    align-self: center;
+                    height: 70%;
+                    margin-left: 3px;
+                    background-image: linear-gradient(to right,$color-gradient-from, $color-gradient-to);
+                    border-radius: 8px;
+                    z-index: 1;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    .bar-dot {
+                        width: 10px;
+                        position: absolute;
+                        height: 10px;
+                        background-color: #fff;
+                        right: 2px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            span {
+                font-size: $font-size-small;
+                font-weight: 700;
+
+                &.progress-data-min {
+                    flex: 1;
+                }
+        
+                &.progress-data-max {
+                    flex: 1;
+                    text-align: right;
+                }
+            }
+
+        }
+
+
+
     }
 
 }
